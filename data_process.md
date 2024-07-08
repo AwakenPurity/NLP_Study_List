@@ -34,7 +34,7 @@ One-hot 编码，又叫做独热编码，其是一种将数据转换为数值数
 - Skip-Gram: 根据中心词预测上下文词
 
 **CBOW的流程**：  
-- 数据集的构建：
+- 数据集的构建：  
   `example: I tried to update my Scipy library version but it was still the same`
    
   **一、数据预处理**
@@ -48,5 +48,8 @@ One-hot 编码，又叫做独热编码，其是一种将数据转换为数值数
      |---|-------|--------|--------|----|
      | I | tried | **to** | update | my |
      
-     `to` 是需要被预测的中心词，`I`, `tried`, `update` 和 `my` 就是其上下文。
+     `to` 是需要被预测的中心词，`I`, `tried`, `update` 和 `my` 就是其上下文。  
 
+  **三、生成上下文-目标对**
+  对于每个目标词，提取其前后的上下文词。
+  例如，对于目标词 `to`，其上下文词为 `I`, `tried`, `update`, `my`。
