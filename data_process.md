@@ -35,11 +35,13 @@ One-hot 编码，又叫做独热编码，其是一种将数据转换为数值数
 
 **CBOW的流程**：  
 - 数据集的构建：
-  `example: I tried to update my Scipy library version but it was still the same`  
+  `example: I tried to update my Scipy library version but it was still the same`
+   
   **一、数据预处理**
   1. 从文本数据中去除标点符号、特殊字符等
   2. 标记化（Tokenization）： 将文本数据分割成单词序列
   3. 创建词汇表（Vocabulary）： 建立一个包含所有单词的词汇表，并为每个单词分配一个唯一的索引  
+  
   **二、构建上下文窗口**
   1. 定义窗口大小：在模型训练之前，我们需要定义一个单词周围的哪几个单词作为其上下文；例如,窗口大小为 `2` ，这意味着在目标词的前后各取2个单词作为上下文。  
      | 1  |  2   |    3   |    4   |  5 |
