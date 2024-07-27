@@ -88,7 +88,7 @@ One-hot 编码，又叫做独热编码，其是一种将数据转换为数值数
  converter.convert('汉字')  # 漢字  
  '''
 
- 参考链接：https://github.com/BYVoid/OpenCC?tab=readme-ov-file
+ 参考链接：https://github.com/BYVoid/OpenCC?tab=readme-ov-file  
  维基百科数据集连接：https://dumps.wikimedia.org/zhwiki/latest/
 
 
