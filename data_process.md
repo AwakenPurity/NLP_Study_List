@@ -33,28 +33,6 @@ One-hot 编码，又叫做独热编码，其是一种将数据转换为数值数
 - Continuous Bag-of-Words (CBOW) : 根据上下文词预测中心词
 - Skip-Gram: 根据中心词预测上下文词  
 
-利用 `gensim` 包来对进行词嵌入
-```
-from gensim.models import word2vec  
-import logging
-logging.basicConfig(format="%(asctime)s : %(levelname)s : %(message)s", level=logging.INFO)
-
-# 随便以一句话为例
-raw_sentences = ["I tried to update my Scipy library version but it was still the same", " I deprecated in the last Scipy version"]  
-
-# 分词
-sentences = [s.split() for s in raw_sentences]
-
-# 词嵌入
-"""
- sentences: 输入数据，
- min_count: 过滤词频小于等于1的单词
-"""
-model = word2vec.Word2Vec(sentences, min_count=1)
-
-# 判断两个词的相似程度
-model.wv.similarity('tried', 'last')  
-```
 
 **CBOW的流程**：  
 - 数据集的构建：  
@@ -103,4 +81,40 @@ model.wv.similarity('tried', 'last')
       负采样的个数一般在 `5` 个左右（经验值）。
 
  ### 1.3 繁体字转为简体字
- 通常，在使用维基百科数据集的时候，往往会遇到很多
+ 通常，在使用维基百科数据集的时候，往往会遇到很多繁体字，需要使用 `opencc` 这个包来进行转换。  
+ '''
+ import opencc  
+ converter = opencc.OpenCC('t2s.json')  
+ converter.convert('汉字')  # 漢字  
+ '''
+
+ 参考链接：https://github.com/BYVoid/OpenCC?tab=readme-ov-file
+ 维基百科数据集连接：https://dumps.wikimedia.org/zhwiki/latest/
+
+
+ ### 1.4 代码  
+ 1. 利用 `gensim` 包来对进行词嵌入
+ ```
+ from gensim.models import word2vec  
+ import logging
+ logging.basicConfig(format="%(asctime)s : %(levelname)s : %(message)s", level=logging.INFO)
+ 
+ # 随便以一句话为例
+ raw_sentences = ["I tried to update my Scipy library version but it was still the same", " I deprecated in the last Scipy version"]  
+ 
+ # 分词
+ sentences = [s.split() for s in raw_sentences]
+ 
+ # 词嵌入模型训练
+ '''
+  sentences: 输入数据，
+  min_count: 过滤词频小于等于1的单词，
+  Gensim中的Word2Vec模型默认使用CBOW方法，如果你想明确指定使用CBOW或Skip-gram，可以通过设置参数sg来选择：  
+    sg=0 使用CBOW方法（默认值）  
+    sg=1 使用Skip-gram方法  
+ '''
+ model = word2vec.Word2Vec(sentences, min_count=1)
+ 
+ # 判断两个词的相似程度
+ model.wv.similarity('tried', 'last')
+ ```
