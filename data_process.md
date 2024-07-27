@@ -82,11 +82,11 @@ One-hot 编码，又叫做独热编码，其是一种将数据转换为数值数
 
  ### 1.3 繁体字转为简体字
  通常，在使用维基百科数据集的时候，往往会遇到很多繁体字，需要使用 `opencc` 这个包来进行转换。  
- '''
- import opencc  
- converter = opencc.OpenCC('t2s.json')  
- converter.convert('汉字')  # 漢字  
- '''
+ '''  
+ import opencc   
+ converter = opencc.OpenCC('t2s.json')    
+ converter.convert('汉字')  # 漢字    
+ '''  
 
  参考链接：https://github.com/BYVoid/OpenCC?tab=readme-ov-file  
  维基百科数据集连接：https://dumps.wikimedia.org/zhwiki/latest/
