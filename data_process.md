@@ -116,5 +116,18 @@ One-hot 编码，又叫做独热编码，其是一种将数据转换为数值数
  model = word2vec.Word2Vec(sentences, min_count=1)
  
  # 判断两个词的相似程度
- model.wv.similarity('tried', 'last')
+ model.wv.similarity('tried', 'last')  # 可以保存该模型  
  ```
+
+假设已经将训练好的模型保存为 `zh.text.model`, 需要找到跟下面5个词最相近的词是哪个？  
+
+```
+from gensim.models import Word2Vec
+model = Word2Vec.load('zh.text.model')
+
+testwords = ['苹果', '香蕉', '语文', '数学', '英语']
+for i in range(5):
+  res = model.wv.most_similar(testwords[i])
+  print(testwords[i], res)
+```
+
