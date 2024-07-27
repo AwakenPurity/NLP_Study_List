@@ -31,7 +31,30 @@ One-hot 编码，又叫做独热编码，其是一种将数据转换为数值数
 
 单词本身的含义一般是很容易就可以做到的，难点在于如何将一个单词和其他单词进行关联；Word2Vec主要是提出了两种方案：  
 - Continuous Bag-of-Words (CBOW) : 根据上下文词预测中心词
-- Skip-Gram: 根据中心词预测上下文词
+- Skip-Gram: 根据中心词预测上下文词  
+
+利用 `gensim` 包来对进行词嵌入
+```
+from gensim.models import word2vec  
+import logging
+logging.basicConfig(format="%(asctime)s : %(levelname)s : %(message)s", level=logging.INFO)
+
+# 随便以一句话为例
+raw_sentences = ["I tried to update my Scipy library version but it was still the same", " I deprecated in the last Scipy version"]  
+
+# 分词
+sentences = [s.split() for s in raw_sentences]
+
+# 词嵌入
+"""
+ sentences: 输入数据，
+ min_count: 过滤词频小于等于1的单词
+"""
+model = word2vec.Word2Vec(sentences, min_count=1)
+
+# 判断两个词的相似程度
+model.wv.similarity('tried', 'last')  
+```
 
 **CBOW的流程**：  
 - 数据集的构建：  
@@ -79,5 +102,5 @@ One-hot 编码，又叫做独热编码，其是一种将数据转换为数值数
 
       负采样的个数一般在 `5` 个左右（经验值）。
 
-    ### 1.3 繁体字转为简体字
-    通常，在使用维基百科数据集的时候，往往会遇到很多
+ ### 1.3 繁体字转为简体字
+ 通常，在使用维基百科数据集的时候，往往会遇到很多
