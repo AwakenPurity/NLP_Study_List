@@ -83,7 +83,6 @@ df.head()
     <tr style="text-align: right;">
       <th></th>
       <th>id</th>
-      <th>sentiment</th>
       <th>review</th>
       <th>clean_review</th>
     </tr>
@@ -91,38 +90,33 @@ df.head()
   <tbody>
     <tr>
       <th>0</th>
-      <td>5814_8</td>
-      <td>1</td>
-      <td>With all this stuff going down at the moment w...</td>
-      <td>stuff moment mj i ve started listening music w...</td>
+      <td>9999_0</td>
+      <td>Watching Time Chasers, it obvious that it was ...</td>
+      <td>watching time chasers obvious made a bunch fri...</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>2381_9</td>
-      <td>1</td>
-      <td>"The Classic War of the Worlds" by Timothy Hin...</td>
-      <td>classic war worlds timothy hines a entertainin...</td>
+      <td>45057_0</td>
+      <td>I saw this film about 20 years ago and remembe...</td>
+      <td>i film years ago remember nasty i based a true...</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>7759_3</td>
-      <td>0</td>
-      <td>The film starts with a manager (Nicholas Bell)...</td>
-      <td>film starts a manager nicholas bell giving inv...</td>
+      <td>15561_0</td>
+      <td>Minor Spoilers&lt;br /&gt;&lt;br /&gt;In New York, Joan Ba...</td>
+      <td>minor spoilersin york joan barnard elvire audr...</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>3630_4</td>
-      <td>0</td>
-      <td>It must be assumed that those who praised this...</td>
-      <td>assumed praised film greatest filmed opera did...</td>
+      <td>7161_0</td>
+      <td>I went to see this film with a great deal of e...</td>
+      <td>i film a great deal excitement i school direct...</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>9495_8</td>
-      <td>1</td>
-      <td>Superbly trashy and wondrously unpretentious 8...</td>
-      <td>superbly trashy wondrously unpretentious s exp...</td>
+      <td>43971_0</td>
+      <td>Yes, I agree with everyone on this site this m...</td>
+      <td>i agree site movie bad call a movie insult mov...</td>
     </tr>
   </tbody>
 </table>
