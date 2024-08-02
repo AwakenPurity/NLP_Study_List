@@ -39,4 +39,13 @@
 - 'and' 出现了 1 次  
 - 'am' 出现了 1 次  
 - 'great' 出现了 1 次  
-- 'is' 出现了 0 次  
+- 'is' 出现了 0 次
+
+### 4. 基于词袋模型来实验一个分类任务  
+
+1. 数据集准备
+[labeledTrainData.tsv](./data/labeledTrainData.tsv): 包含电影评论及其对应的情感标签（如正面或负面）  
+[stopwords.txt](./data/stopwords.txt): 常用的停用词表，包含一组停用词，这些词在文本处理中会被忽略，因为它们对于文本的主题或意义贡献不大
+
+2. 代码
+
