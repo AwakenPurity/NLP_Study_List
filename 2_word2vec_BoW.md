@@ -44,8 +44,23 @@
 ### 4. 基于词袋模型来实验一个分类任务  
 
 1. 数据集准备  
-[labeledTrainData.tsv](./data/labeledTrainData.tsv): 包含电影评论及其对应的情感标签（如正面或负面）  
-[stopwords.txt](./data/stopwords.txt): 常用的停用词表，包含一组停用词，这些词在文本处理中会被忽略，因为它们对于文本的主题或意义贡献不大
+[labeledTrainData.tsv](https://ww0.lanzout.com/iRXun26aiihc): 包含电影评论及其对应的情感标签（如正面或负面）  
+[stopwords.txt](https://ww0.lanzout.com/iASta26aiite): 常用的停用词表，包含一组停用词，这些词在文本处理中会被忽略，因为它们对于文本的主题或意义贡献不大
 
 2. 代码
+```python
+import os
+import re
+import numpy as np
+import pandas as pd
+
+from bs4 import BeautifulSoup
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import confusion_matrix
+from sklearn.linear_model import LogisticRegression
+
+import nltk
+from nltk.corpus import stopwords
+```
 
