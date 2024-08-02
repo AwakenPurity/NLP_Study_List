@@ -1,4 +1,4 @@
-## Word Embedding之word2vec分类任务（使用gensim包
+## 3. Word Embedding之word2vec分类任务（使用gensim包
 
 之前在第一节的时候，简单介绍过`Word2Vec模型`，`Word2Vec模型`和`词袋模型`都是用于词向量化的模型：  
 1. `词袋模型`主要是基于词频统计来将单词转为向量的。
