@@ -1,6 +1,5 @@
-# Word Embedding之词袋模型分类任务（Bag of Words
 
-## 2. Bag of Words
+## 2. Word Embedding之词袋模型分类任务（Bag of Words
 
 词袋模型（Bag of Words, BoW）是将文本转换为词的向量最基本的方法之一。  
 
