@@ -63,4 +63,90 @@ from sklearn.linear_model import LogisticRegression
 import nltk
 from nltk.corpus import stopwords
 ```
+```python
+nltk.download()
+```
+```python
+df = pd.read_csv('./labeledTrainData.tsv', sep='\t', escapechar='\\')
+print(len(df))
+```
+25000
+```python
+df.head()
+```
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>sentiment</th>
+      <th>review</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>5814_8</td>
+      <td>1</td>
+      <td>With all this stuff going down at the moment w...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2381_9</td>
+      <td>1</td>
+      <td>"The Classic War of the Worlds" by Timothy Hin...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>7759_3</td>
+      <td>0</td>
+      <td>The film starts with a manager (Nicholas Bell)...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3630_4</td>
+      <td>0</td>
+      <td>It must be assumed that those who praised this...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>9495_8</td>
+      <td>1</td>
+      <td>Superbly trashy and wondrously unpretentious 8...</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+```python
+
+```
+```python
+
+```
+```python
+
+```
+```python
+
+```
+```python
+
+```
+```python
+
+```
 
