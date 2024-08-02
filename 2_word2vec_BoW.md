@@ -31,12 +31,12 @@
 
 根据词汇表，将句子 "I love machine learning and i am great" 转换为词频向量：`[2, 1, 1, 1, 1, 1, 1, 0]`.  
 
-解释：
-'i' 出现了 2 次  
-'love' 出现了 1 次  
-'machine' 出现了 1 次  
-'learning' 出现了 1 次  
-'and' 出现了 1 次  
-'am' 出现了 1 次  
-'great' 出现了 1 次  
-'is' 出现了 0 次  
+解释：  
+- 'i' 出现了 2 次  
+- 'love' 出现了 1 次  
+- 'machine' 出现了 1 次  
+- 'learning' 出现了 1 次  
+- 'and' 出现了 1 次  
+- 'am' 出现了 1 次  
+- 'great' 出现了 1 次  
+- 'is' 出现了 0 次  
