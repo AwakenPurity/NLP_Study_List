@@ -306,7 +306,7 @@ clean_data.head()
 </table>
 </div>
 
-**查看数据分布情况: 是否不平衡  **
+**查看数据分布情况: 是否不平衡**
 ```python
 clean_data.groupby("class_label").count()
 ```
@@ -344,7 +344,7 @@ clean_data.groupby("class_label").count()
 </table>
 </div>
 
-**分词、数据集划分  **
+**分词、数据集划分**
 ```python
 # 分词
 # 使用了NLTK库中的RegexpTokenizer来对文本进行分词
@@ -406,7 +406,7 @@ clean_data.head()
 </table>
 </div>
 
-**语料库情况  **
+**语料库情况**
 ```python
 from keras_preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
@@ -459,7 +459,7 @@ X_train_counts, count_vectorizer = cv(X_train)
 X_test_counts = count_vectorizer.transform(X_test)
 ```
 
-**PCA展示Bag of Words  **
+**PCA展示Bag of Words**
 ```python
 from sklearn.decomposition import PCA, TruncatedSVD
 import matplotlib
@@ -484,7 +484,7 @@ plt.show()
 ```
 ![image](https://github.com/user-attachments/assets/c413e3c8-3a39-4243-8b69-364f4cf4ce30)
 
-**可以看来PCA效果并不是很好  **
+**可以看来PCA效果并不是很好**
 
 **逻辑回归分类看一下结果**
 ```python
@@ -710,7 +710,7 @@ plt.show()
 ```
 ![image](https://github.com/user-attachments/assets/8e4253c0-1f6d-465c-b819-d3f0dd42a06a)
 
-**和词袋模型相比，TF-IDF的效果看上去会稍微好一点  **
+**和词袋模型相比，TF-IDF的效果看上去会稍微好一点**
 
 ```python
 clf_tfidf = LogisticRegression(C=30.0, class_weight='balanced', solver="newton-cg",
