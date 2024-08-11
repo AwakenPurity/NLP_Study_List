@@ -1,11 +1,11 @@
-## 3. 通过词袋模型、TF-IDF模型、词向量模型、深度学习模型分别进行词嵌入，来查看他们的区别。
+## 4. 通过词袋模型、TF-IDF模型、词向量模型、深度学习模型分别进行词嵌入，来查看他们的区别。
 
 本节里所用的数据集和文件均可在下面获取：  
 [socialmedia_relevant_cols_clean.csv](https://ww0.lanzout.com/iU6Ux276hpeh)  
 [cleaned_data.csv](https://ww0.lanzout.com/icAWk276hvuj)
 
 
-### 3.1 数据预处理
+### 4.1 数据预处理
 ```python
 import keras
 import nltk
@@ -439,7 +439,7 @@ plt.show()
 
 下面通过词袋模型、TF-IDF模型、词向量模型、深度学习模型分别进行词嵌入，来查看他们的区别。
 
-### 3.2 词袋模型 Bag of Words Counts 
+### 4.2 词袋模型 Bag of Words Counts 
 ```python
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
@@ -671,7 +671,7 @@ accu:77.78, precision:83.33, recall=83.33
 (77.77777777777779, 83.33333194444447, 83.33333194444447)
 
 
-### 3.3 TF-IDF Bag of Words
+### 4.3 TF-IDF Bag of Words
 
 TF-IDF 是一种用于信息检索与文本挖掘的常用加权技术，用来评估一个词对于一个文档集或语料库中某个文档的重要程度。    
  
@@ -757,7 +757,7 @@ plot_important_words(top_scores, top_words, bottom_scores, bottom_words, "Most i
 
 **词频统计的方法就无法或者很难捕捉到这些特征**
 
-### 3.4 word2vec
+### 4.4 word2vec
 ```python
 import gensim
 
@@ -911,7 +911,7 @@ plt.show()
 
 **词嵌入在分类的时候，是直接将一句话中的单词的词向量进行平均然后再进行分类，并没有考虑一句话中单词之间的序列（前后顺序）**
 
-### 3.5 基于深度学习的词嵌入（CNN or RNN）
+### 4.5 基于深度学习的词嵌入（CNN or RNN）
 ```python
 from keras_preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
