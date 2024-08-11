@@ -68,6 +68,7 @@ questions.head()
   </tbody>
 </table>
 </div>
+
 ```python
 questions.describe()
 ```
