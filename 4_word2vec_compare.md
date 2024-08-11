@@ -749,13 +749,13 @@ plot_important_words(top_scores, top_words, bottom_scores, bottom_words, "Most i
 ```
 ![image](https://github.com/user-attachments/assets/909b1970-1fdf-4f8e-a640-8ea13c589c9d)
 
-**但是，以上方法都是考虑每一个基于频率的情况，如果在新的测试环境下有些词发生变化了怎么办？  
+**但是，以上方法都是考虑每一个基于频率的情况，如果在新的测试环境下有些词发生变化了怎么办？**  
 
-比如：有一些单词从来都没有在之前的文档里出现过   
-或者  
-类似于bad和worse的单词表达的意义差不多但是长得不一样  
+**比如：有一些单词从来都没有在之前的文档里出现过**    
+**或者**  
+**类似于bad和worse的单词表达的意义差不多但是长得不一样**
 
-词频统计的方法就无法或者很难捕捉到这些特征。  **
+**词频统计的方法就无法或者很难捕捉到这些特征**
 
 ### 3.4 word2vec
 ```python
@@ -1018,9 +1018,3 @@ model = ConvNet(embedding_weights, MAX_SEQUENCE_LENGTH, len(word_index)+1, EMBED
 ```python
 model.fit(x_train, y_train, validation_data=(x_val, y_val), epochs=3, batch_size=128)
 ```
-Epoch 1/3
-[1m68/68[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m9s[0m 104ms/step - acc: 0.6421 - loss: 0.6879 - val_acc: 0.7522 - val_loss: 0.5103
-Epoch 2/3
-[1m68/68[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m3s[0m 43ms/step - acc: 0.7873 - loss: 0.4667 - val_acc: 0.7936 - val_loss: 0.4641
-Epoch 3/3
-[1m68/68[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m2s[0m 28ms/step - acc: 0.8312 - loss: 0.3899 - val_acc: 0.7959 - val_loss: 0.4610
